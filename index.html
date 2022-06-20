@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="js/sweetalert2.all.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+</head>
+
+<body>
+    <form action="" id="formulario">
+        <section class="form-register">
+            <!-- Título -->
+            <h4>Formulario de Registro</h4>
+
+            <!-- Nombre(s) -->
+            <input class="controls" type="text" name="nombres" id="nombres" pattern="[A-Za-z0-9]{1,20}" autocapitalize="sentences" placeholder="Nombre(s)*"  title="Unicamente ingresa letras" required>
+
+            <!-- Apellido paterno -->
+            <input class="controls" type="text" name="apellido1" id="apellido1" pattern="[A-Za-z0-9]{1,20}" autocapitalize="sentences" placeholder="Apellido Paterno*" required>
+
+            <!-- Apellido materno -->
+            <input class="controls" type="text" name="apellido2" id="apellido2" pattern="[A-Za-z0-9]{1,20}" autocapitalize="sentences" placeholder="Apellido Materno*" required>
+
+            <!-- Correo -->
+            <input class="controls" type="email" name="correo" id="correo" placeholder="Correo electrónico*" required>
+
+            <!-- Estados -->
+            <select name="estado" class="controls" required>
+                <option value="">Estado*</option>
+                <option value="1">Aguascalientes</option>
+                <option value="2">Baja California</option>
+                <option value="3">Baja California Sur</option>
+                <option value="4">Campeche</option>
+                <option value="5">Chiapas</option>
+                <option value="6">Chihuahua</option>
+                <option value="7">Coahuila</option>
+                <option value="8">Colima</option>
+                <option value="9">Ciudad de México</option>
+                <option value="10">Durango</option>
+                <option value="11">Estado de México</option>
+                <option value="12">Guanajuato</option>
+                <option value="13">Guerrero</option>
+                <option value="14">Hidalgo</option>
+                <option value="15">Jalisco</option>
+                <option value="16">Michoacán</option>
+                <option value="17">Nayarit</option>
+                <option value="18">Nuevo León</option>
+                <option value="19">Oaxaca</option>
+                <option value="20">Puebla</option>
+                <option value="21">Querétaro</option>
+                <option value="22">Quintana Roo</option>
+                <option value="23">San Luis Potosí</option>
+                <option value="24">Sinaloa</option>
+                <option value="25">Sonora</option>
+                <option value="26">Tabasco</option>
+                <option value="27">Tamaulipas</option>
+                <option value="28">Tlaxcala</option>
+                <option value="29">Veracruz</option>
+                <option value="30">Yucatán</option>
+                <option value="31">Zacatecas</option>
+            </select>
+
+            <!-- Calle -->
+            <input class="controls" type="text" name="calle" id="calle" pattern="[A-Za-z0-9]{1,20}" autocapitalize="sentences" placeholder="Calle*" required>
+
+            <!-- Número -->
+            <input class="controls" type="number" name="numcalle" id="numcalle" min="1" max="50" placeholder="Número">
+
+            <!-- Colonia -->
+            <input class="controls" type="text" name="colonia" id="colonia" pattern="[A-Za-z0-9]{1,20}" autocapitalize="sentences" placeholder="Colonia*" required>
+
+            <!-- Teléfono -->
+            <input class="controls" type="tel" name="telefono" id="telefono" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-4567-8901*" title="Debe digitar un número de diez dígitos" required>
+
+            <!-- Sexo -->
+            <p>Sexo:*</p>
+            <p>Femenino</p> <!-- Femenino -->
+            <input class="controls" type="radio" name="sexo" id="sexo" value="F" required>
+            <p>Masculino</p> <!-- Masculino -->
+            <input class="controls" type="radio" name="sexo" id="sexo" value="M" required>
+            <br>
+
+            <!-- Fecha de nacimiento -->
+            <p>Fecha de Nacimiento:*</p>
+            <input class="controls" type="date" name="fecha" id="fecha" required>
+
+            <!-- Edad -->
+            <input class="controls" type="number" ondrop="return false;" onpaste="return false;"
+            onkeypress="return event.charCode>=48 && event.charCode<=57" min="18" max="110" placeholder="Edad" required/>
+            <br>
+
+            <!-- Educación -->
+            <p>Educación:</p>
+            <p>Primaria</p><input class="controls" type="checkbox" name="educacion" id="educacion" value="Primaria">
+            <p>Secundaria</p><input class="controls" type="checkbox" name="educacion" id="educacion" value="Secundaria">
+            <p>Preparatoria</p><input class="controls" type="checkbox" name="educacion" id="educacion" value="Preparatoria">
+            <p>Universidad</p><input class="controls" type="checkbox" name="educacion" id="educacion" value="Universidad">
+            <p>Maestría</p><input class="controls" type="checkbox" name="educacion" id="educacion" value="Maestría">
+            <p>Doctorado</p><input class="controls" type="checkbox" name="educacion" id="educacion" value="Doctorado">
+
+            <!-- Estado civil -->
+            <select name="edocivil" class="controls">
+                <option value="">Estado Civil</option>
+                <option value="1">Casado</option>
+                <option value="2">Soltero</option>
+                <option value="3">Divorciado</option>
+                <option value="4">Unión</option>
+            </select>
+
+            <!-- Comentarios -->
+            <textarea name="comentarios" cols="30" rows="2" class="controls" autocapitalize="sentences" maxlength="50" onfocus="this.select();">Comentarios</textarea>
+
+            <!-- botón: Restaurar formulario -->
+            <input id="restaurar" type="reset" value="Restaurar formulario">
+
+            <!-- T&C -->
+            <p>Estoy de acuerdo con <a href="#">Términos y Condiciones</a></p>
+
+            <!-- botón: Registrar -->
+            <input onclick=validar() class="botons" type="submit" value="Registrar">
+            <p><a href="#">¿Ya tengo Cuenta?</a></p>
+        </section>
+
+        <!--  -->
+    </form>
+</body>
+</html>
